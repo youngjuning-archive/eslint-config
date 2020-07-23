@@ -40,8 +40,5 @@
     "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
-  },
-  "devDependencies": {
-    "react": "^16.13.1"
   }
 }

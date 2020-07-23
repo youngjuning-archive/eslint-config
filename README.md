@@ -46,7 +46,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  ...require('@sishuguojixuefu/eslint-config/.prettierrc.js'),
+  ...require('@youngjuning/eslint-config/.prettierrc.js'),
 }
 ```
 

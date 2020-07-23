@@ -8,6 +8,7 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react-native/all',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -24,6 +25,9 @@ module.exports = {
     ...typescriptRule,
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/parsers': {
       '@typescript-eslint/parser': ['.tsx'],
     },

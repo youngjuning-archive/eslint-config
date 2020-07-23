@@ -2,7 +2,7 @@
 
 a powerful esLint config
 
-> 支持 jsx、js、ts、tsx、html
+> support jsx、js、ts、tsx、html、jest
 
 ## Installation
 
@@ -10,28 +10,36 @@ a powerful esLint config
 yarn add -D @youngjuning/eslint-config
 ```
 
-## Fast Usage
+## Config
 
-Config in package.json:
-
-```json
-{
-  "eslintConfig": {
-    "extends": ["@sishuguojixuefu"]
-  },
-  "eslintIgnore": ["!.eslintrc.js", "!.prettierrc.js", "index.js"],
-  "prettier": "@sishuguojixuefu/eslint-config/.prettierrc.js"
-}
-```
-
-## Single File Usage
+### .eslintrc.js
 
 Add to your eslint config (`.eslintrc.js`):
 
 ```js
 module.exports = {
   root: true,
-  extends: '@sishuguojixuefu',
+  extends: '@youngjuning',
+}
+```
+
+### react native
+
+1、删除原始插件
+
+```sh
+$ yarn remove @react-native-community/eslint-config
+```
+
+2、配置 `.eslintrc.js`
+
+```js
+module.exports = {
+  root: true,
+  extends: '@youngjuning',
+  env: {
+    'react-native/react-native': true,
+  },
 }
 ```
 
@@ -83,27 +91,4 @@ indent_size = 4
 
 [BUCK]
 indent_size = 4
-```
-
-## 依赖
-
-- eslint-config-airbnb
-- eslint
-- eslint-plugin-jsx-a11y
-- eslint-plugin-import
-- eslint-plugin-react
-- eslint-plugin-react-hooks
-- babel-eslint
-- eslint-config-airbnb-base
-- prettier
-- eslint-plugin-prettier
-- eslint-config-prettier
-- @typescript-eslint/parser
-- @typescript-eslint/eslint-plugin
-- eslint-import-resolver-typescript
-- typescript
-- eslint-plugin-html
-
-```sh
-$ yarn add eslint-config-airbnb-base eslint-config-airbnb eslint eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks babel-eslint prettier eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript typescript eslint-plugin-html
 ```

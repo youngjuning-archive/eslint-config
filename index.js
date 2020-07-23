@@ -8,7 +8,7 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: ['plugin:prettier/recommended'],
+  extends: ['plugin:jest/recommended', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaFeatures: {
       impliedStrict: true,
@@ -16,5 +16,26 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  overrides: [javascript, javascriptReact, typescript, typescriptReact, html],
+  rules: {
+    // Jest Plugin
+    // The following rules are made available via `eslint-plugin-jest`.
+    'jest/no-disabled-tests': 1,
+    'jest/no-focused-tests': 1,
+    'jest/no-identical-title': 1,
+    'jest/valid-expect': 1,
+  },
+  overrides: [
+    javascript,
+    javascriptReact,
+    typescript,
+    typescriptReact,
+    html,
+    {
+      files: ['*.{spec,test}.{js,ts,tsx}', '**/__tests__/**/*.{js,ts,tsx}'],
+      env: {
+        jest: true,
+        'jest/globals': true,
+      },
+    },
+  ],
 }

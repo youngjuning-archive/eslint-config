@@ -14,4 +14,8 @@ module.exports = {
   'react/static-property-placement': 0,
   'react/no-unescaped-entities': 0,
   'react-hooks/exhaustive-deps': 0,
+  'react-native/no-color-literals': 0,
+  'react-native/no-raw-text': 0,
+  'react-native/no-inline-styles': 0,
+  'react-native/split-platform-components': 0,
 }

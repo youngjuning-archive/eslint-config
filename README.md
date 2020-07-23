@@ -1,5 +1,7 @@
 # @youngjuning/eslint-config
 
+a powerful esLint config
+
 > 支持 jsx、js、ts、tsx、html
 
 ## Installation

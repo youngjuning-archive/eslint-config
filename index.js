@@ -8,11 +8,7 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: [
-    'plugin:prettier/recommended',
-    'plugin:you-dont-need-lodash-underscore/compatible',
-    'plugin:you-dont-need-momentjs/recommended',
-  ],
+  extends: ['plugin:prettier/recommended'],
   parserOptions: {
     ecmaFeatures: {
       impliedStrict: true,

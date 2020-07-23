@@ -12,8 +12,6 @@ yarn add -D @youngjuning/eslint-config-airbnb
 
 ## Config
 
-### .eslintrc.js
-
 Add to your eslint config (`.eslintrc.js`):
 
 ```js
@@ -25,20 +23,24 @@ module.exports = {
 
 ### react native
 
-1、删除原始插件
-
-```sh
-$ yarn remove @react-native-community/eslint-config
+```js
+module.exports = {
+  root: true,
+  extends: '@youngjuning/airbnb',
+  env: {
+    'react-native/react-native': true,
+  },
+}
 ```
 
-2、配置 `.eslintrc.js`
+### vue with typescript
 
 ```js
 module.exports = {
   root: true,
-  extends: '@youngjuning',
-  env: {
-    'react-native/react-native': true,
+  extends: '@youngjuning/airbnb',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
   },
 }
 ```

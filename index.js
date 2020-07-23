@@ -2,6 +2,7 @@ const javascript = require('./overrides/javascript')
 const javascriptReact = require('./overrides/javascriptReact')
 const typescript = require('./overrides/typescript')
 const typescriptReact = require('./overrides/typescriptReact')
+const html = require('./overrides/html')
 
 module.exports = {
   env: {
@@ -19,10 +20,5 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  overrides: [
-    javascript,
-    javascriptReact,
-    typescript,
-    typescriptReact
-  ],
+  overrides: [javascript, javascriptReact, typescript, typescriptReact, html],
 }

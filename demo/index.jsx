@@ -6,6 +6,7 @@ export default class index extends Component {
     return (
       <View>
         <Text> textInComponent </Text>
+        <View />
       </View>
     )
   }

@@ -14,7 +14,6 @@ module.exports = {
   'no-restricted-globals': 0, // 禁用特定的全局变量
   'no-use-before-define': 0, // 禁止定义前使用
   'no-unused-expressions': 0, // 禁止未使用过的表达式
-  'no-unused-vars': 1,
   'prefer-destructuring': [
     2,
     {

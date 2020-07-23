@@ -1,13 +1,13 @@
-# @youngjuning/eslint-config
+# @youngjuning/eslint-config-airbnb
 
 a powerful esLint config
 
-> support jsx、js、ts、tsx、html、jest
+> support vue、jsx、js、ts、tsx、html、jest
 
 ## Installation
 
 ```
-yarn add -D @youngjuning/eslint-config
+yarn add -D @youngjuning/eslint-config-airbnb
 ```
 
 ## Config
@@ -19,7 +19,7 @@ Add to your eslint config (`.eslintrc.js`):
 ```js
 module.exports = {
   root: true,
-  extends: '@youngjuning',
+  extends: '@youngjuning/airbnb',
 }
 ```
 
@@ -56,7 +56,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  ...require('@youngjuning/eslint-config/.prettierrc.js'),
+  ...require('@youngjuning/eslint-config-airbnb/.prettierrc.js'),
 }
 ```
 
@@ -91,4 +91,29 @@ indent_size = 4
 
 [BUCK]
 indent_size = 4
+```
+
+## yorkie & lint-staged
+
+```sh
+$ yarn add -D yorkie lint-staged
+```
+
+```json
+{
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    // you can add wxml/html...
+    "*.{less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+}
 ```

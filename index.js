@@ -3,6 +3,7 @@ const javascriptReact = require('./overrides/javascriptReact')
 const typescript = require('./overrides/typescript')
 const typescriptReact = require('./overrides/typescriptReact')
 const html = require('./overrides/html')
+const vue = require('./overrides/vue')
 
 module.exports = {
   env: {
@@ -30,6 +31,7 @@ module.exports = {
     typescript,
     typescriptReact,
     html,
+    vue,
     {
       files: ['*.{spec,test}.{js,ts,tsx}', '**/__tests__/**/*.{js,ts,tsx}'],
       env: {

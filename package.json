@@ -1,0 +1,46 @@
+{
+  "name": "@youngjuning/eslint-config",
+  "version": "0.0.0",
+  "description": "a powerful esLint config",
+  "keywords": [
+    "eslint-config",
+    "prettier",
+    "typescript"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "postversion": "git push --tags && git push && npm publish"
+  },
+  "homepage": "https://github.com/youngjuning/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youngjuning/eslint-config.git"
+  },
+  "author": {
+    "name": "杨俊宁",
+    "email": "1003719811@qq.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
+    "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "react": "^16.13.1"
+  }
+}

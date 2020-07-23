@@ -6,8 +6,10 @@ a powerful esLint config based on airbnb
 
 ## Installation
 
-```
-yarn add -D @youngjuning/eslint-config-airbnb
+> First of all, Please remove existed config in your project.
+
+```sh
+$ yarn add -D @youngjuning/eslint-config-airbnb
 ```
 
 ## Config

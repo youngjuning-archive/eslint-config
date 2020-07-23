@@ -1,6 +1,6 @@
 # @youngjuning/eslint-config-airbnb
 
-a powerful esLint config
+a powerful esLint config based on airbnb
 
 > support vue、jsx、js、ts、tsx、html、jest
 

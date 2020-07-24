@@ -23,6 +23,7 @@ module.exports = {
     ...javascriptRule,
     ...reactRule,
     ...typescriptRule,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
   settings: {
     react: {

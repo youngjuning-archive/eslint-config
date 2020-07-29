@@ -7,6 +7,7 @@ export default class index extends Component {
       <View>
         <Text> textInComponent </Text>
         <View />
+        <img>
       </View>
     )
   }

@@ -62,6 +62,14 @@ module.exports = {
 }
 ```
 
+## git autocrlf 设置
+
+为了解决换行符冲突的问题，强烈建议设置 core.autocrlf 为 input。为什么这么做请读一下 [Git 多平台换行符问题(LF or CRLF)](https://blog.konghy.cn/2017/03/19/git-lf-or-crlf/)
+
+```sh
+$ git config --global core.autocrlf input
+```
+
 ## More
 
 ### .eslintignore

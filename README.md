@@ -49,6 +49,19 @@ module.exports = {
 }
 ```
 
+## vscode eslint 配置
+
+禁用 formatOnSave，开启 source.fixAll.eslint
+
+```json
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+```
+
 ## More
 
 ### .eslintignore

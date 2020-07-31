@@ -7,7 +7,8 @@ a powerful esLint config based on airbnb
 ## Installation
 
 > First of all, Please remove existed config in your project to avoid dependency conflict.
-> remove eslint、prettier dependency in your project
+
+> Please remove eslint、prettier、typescript dependency in your project.
 
 ```sh
 $ yarn add -D @youngjuning/eslint-config-airbnb

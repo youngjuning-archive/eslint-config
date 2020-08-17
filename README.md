@@ -11,7 +11,9 @@ a powerful esLint config based on airbnb
 > Please remove eslint、prettier、typescript dependency in your project.
 
 ```sh
-$ yarn add -D @youngjuning/eslint-config-airbnb eslint-plugin-prettier
+$ yarn add -D @youngjuning/eslint-config-airbnb
+# 如果报错可加这个
+$ yarn add -D eslint-plugin-prettier
 ```
 
 ## Config

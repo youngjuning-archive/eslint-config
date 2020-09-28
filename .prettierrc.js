@@ -2,7 +2,7 @@ module.exports = {
   printWidth: 120, // 一行的字符数，如果超过会进行换行，默认为80
   tabWidth: 2, // tab缩进大小,默认为2
   useTabs: false, // 使用tab缩进，默认false
-  semi: false, // 使用分号, 默认true
+  semi: true, // 使用分号, 默认true
   /**
    * 行尾逗号,默认none,可选 none|es5|all
    * es5 包括es5中的数组、对象

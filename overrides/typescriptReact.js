@@ -1,6 +1,6 @@
-const javascriptRule = require('./rules/javascript')
-const reactRule = require('./rules/react')
-const typescriptRule = require('./rules/typescript')
+const javascriptRule = require('./rules/javascript');
+const reactRule = require('./rules/react');
+const typescriptRule = require('./rules/typescript');
 
 module.exports = {
   files: ['*.tsx'],
@@ -8,7 +8,6 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-native/all',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -39,4 +38,4 @@ module.exports = {
       },
     },
   },
-}
+};

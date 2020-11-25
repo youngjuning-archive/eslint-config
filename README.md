@@ -1,105 +1,128 @@
-# @youngjuning/eslint-config-airbnb
+# @youngjuning/eslint-config
 
-a powerful esLint config based on airbnb
+a powerful esLint config based on airbnb, support react、react-native、vue、miniprogram
 
-> support vue、jsx、js、ts、tsx、html、jest
+## Prettier
 
-## Installation
-
-> First of all, Please remove existed config in your project to avoid dependency conflict.
-
-> Please remove eslint、prettier、typescript dependency in your project.
+Dependencies:
 
 ```sh
-$ yarn add -D @youngjuning/eslint-config-airbnb
-# 如果报错可加这个
-$ yarn add -D eslint-plugin-prettier
+$ yarn add @youngjuning/prettier-config -D
 ```
 
-## Config
-
-Add to your eslint config (`.eslintrc.js`):
+Config:
 
 ```js
-module.exports = {
-  root: true,
-  extends: '@youngjuning/airbnb',
-}
+// .prettierrc.js
+module.exports = require('@youngjuning/prettier-config');
 ```
 
-### react native
+## Base
 
-```js
-module.exports = {
-  root: true,
-  extends: '@youngjuning/airbnb',
-  env: {
-    'react-native/react-native': true,
-  },
-}
-```
-
-### vue with typescript
-
-```js
-module.exports = {
-  root: true,
-  extends: '@youngjuning/airbnb',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-  },
-}
-```
-
-## vscode eslint 配置
-
-禁用 formatOnSave，开启 source.fixAll.eslint
-
-```json
-{
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "prettier.disableLanguages": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue"
-  ],
-}
-```
-
-## git autocrlf 设置
-
-为了解决换行符冲突的问题，强烈建议设置 core.autocrlf 为 input。为什么这么做请读一下 [Git 多平台换行符问题(LF or CRLF)](https://blog.konghy.cn/2017/03/19/git-lf-or-crlf/)
+Dependencies:
 
 ```sh
-$ git config --global core.autocrlf input
+$ yarn add -D eslint @youngjuning/eslint-config
 ```
 
-## More
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@youngjuning/eslint-config']
+}
+```
+
+## React
+
+Dependencies:
+
+```sh
+$ yarn add -D eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-import \
+  eslint-plugin-html
+```
+
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@youngjuning/eslint-config/react']
+}
+```
+
+## React Native
+
+Dependencies:
+
+```sh
+$ yarn add -D eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-import \
+  eslint-plugin-react-native
+```
+
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@youngjuning/eslint-config/react-native']
+}
+```
+
+## Vue
+
+Dependencies:
+
+```sh
+$ yarn add -D @vue/cli-service eslint-plugin-vue @vue/eslint-config-airbnb eslint-plugin-html
+```
+
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@youngjuning/eslint-config/vue']
+}
+```
+
+## miniprogram
+
+Dependencies:
+
+```sh
+$ yarn add eslint-plugin-html -D
+```
+
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@youngjuning/eslint-config/miniprogram']
+}
+```
+
+## Jest
+
+```sh
+$ yarn add jest -D
+```
+
+## More Config
 
 ### .eslintignore
 
 ```
 !.eslintrc.js
 !.prettierrc.js
-```
-
-### .prettierrc.js
-
-```js
-module.exports = {
-  ...require('@youngjuning/eslint-config-airbnb/.prettierrc.js'),
-}
-```
-
-### .prettierignore
-
-```
-**/node_modules/*
 ```
 
 ### .editorconfig
@@ -129,27 +152,62 @@ indent_size = 4
 indent_size = 4
 ```
 
-## yorkie & lint-staged
+### husky & lint-staged
 
 ```sh
-$ yarn add -D yorkie lint-staged
+$ yarn add -D husky lint-staged
 ```
 
 ```json
 {
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "git add"
     ],
     // you can add wxml/html...
-    "*.{less,md,json}": [
+    "**/*.{less,md,json}": [
       "prettier --write",
       "git add"
     ]
   },
 }
 ```
+
+### vscode eslint 配置
+
+禁用 formatOnSave，开启 source.fixAll.eslint
+
+```json
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 建议直接删掉 Prettier 插件
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+}
+```
+
+### git autocrlf
+
+为了解决换行符冲突的问题，强烈建议设置 `core.autocrlf` 为 `input`。为什么这么做请读一下 [Git 多平台换行符问题(LF or CRLF)](https://blog.konghy.cn/2017/03/19/git-lf-or-crlf/)
+
+```sh
+$ git config --global core.autocrlf input
+```
+
+## Related repos
+
+- [@youngjuning/prettier-config](https://github.com/youngjuning/prettier-config)

@@ -1,9 +1,11 @@
 module.exports = {
   'jsx-a11y/accessible-emoji': 0,
+  // Append 'tsx' to Airbnb 'react/jsx-filename-extension' rule
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
   'react/jsx-filename-extension': [
     2,
     {
-      extensions: ['.tsx', '.jsx'],
+      extensions: ['.jsx', '.tsx'],
     },
   ],
   'react/prefer-stateless-function': 0,
@@ -14,8 +16,4 @@ module.exports = {
   'react/static-property-placement': 0,
   'react/no-unescaped-entities': 0,
   'react-hooks/exhaustive-deps': 0,
-  'react-native/no-color-literals': 0,
-  'react-native/no-raw-text': 0,
-  'react-native/no-inline-styles': 0,
-  'react-native/split-platform-components': 0,
-}
+};

@@ -1,7 +1,6 @@
 module.exports = {
   'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-  'no-unused-vars': 1,
   'vue/require-valid-default-prop': 0,
   'vue/require-v-for-key': 1,
   'vue/max-attributes-per-line': 0, // 解决Attribute "bind" should be on a new line
@@ -17,4 +16,4 @@ module.exports = {
       'x-invalid-end-tag': false,
     },
   ],
-}
+};

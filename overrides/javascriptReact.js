@@ -1,9 +1,9 @@
-const javascriptRule = require('./rules/javascript')
-const reactRule = require('./rules/react')
+const javascriptRule = require('./rules/javascript');
+const reactRule = require('./rules/react');
 
 module.exports = {
   files: ['*.jsx'],
-  extends: ['airbnb', 'airbnb/hooks', 'plugin:react-native/all', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -19,4 +19,4 @@ module.exports = {
       version: 'detect',
     },
   },
-}
+};

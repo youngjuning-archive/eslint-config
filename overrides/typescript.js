@@ -1,9 +1,14 @@
-const javascriptRule = require('./rules/javascript')
-const typescriptRule = require('./rules/typescript')
+const javascriptRule = require('./rules/javascript');
+const typescriptRule = require('./rules/typescript');
 
 module.exports = {
   files: ['*.ts'],
-  extends: ['airbnb-base/legacy', 'plugin:@typescript-eslint/recommended', 'prettier', 'prettier/@typescript-eslint'],
+  extends: [
+    'airbnb-base/legacy',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
   parser: '@typescript-eslint/parser',
   rules: {
     ...javascriptRule,
@@ -11,7 +16,7 @@ module.exports = {
   },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
     'import/resolver': {
       // use <root>/tsconfig.json
@@ -20,4 +25,4 @@ module.exports = {
       },
     },
   },
-}
+};

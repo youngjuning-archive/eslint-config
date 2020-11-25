@@ -1,4 +1,4 @@
-const javascriptRule = require('./rules/javascript.js')
+const javascriptRule = require('./rules/javascript');
 
 module.exports = {
   files: ['*.html'],
@@ -11,5 +11,7 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: { ...javascriptRule },
-}
+  rules: {
+    ...javascriptRule,
+  },
+};

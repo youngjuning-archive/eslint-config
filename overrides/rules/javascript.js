@@ -8,6 +8,7 @@ module.exports = {
       exceptAfterSingleLine: true, //  跳过对单行类成员之后的空行的检查
     },
   ],
+  'no-unused-vars': 1,
   'no-useless-constructor': 1,
   'max-classes-per-file': 0,
   'no-nested-ternary': 0, // 禁止使用嵌套的三元表达式
@@ -25,4 +26,4 @@ module.exports = {
   'import/extensions': 0, // Ensure consistent use of file extension within the import path
   'import/no-extraneous-dependencies': 0, // Forbid the use of extraneous packages
   'import/no-named-as-default-member': 0,
-}
+};

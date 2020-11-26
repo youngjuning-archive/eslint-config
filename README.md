@@ -104,13 +104,7 @@ module.exports = {
 
 ## miniprogram
 
-> support .js、.ts、.wxml
-
-Dependencies:
-
-```sh
-$ yarn add eslint-plugin-html -D
-```
+> support .js、.ts
 
 Config:
 
@@ -118,6 +112,19 @@ Config:
 // .eslintrc.js
 module.exports = {
   extends: ['@youngjuning/eslint-config/miniprogram']
+}
+```
+
+## html
+
+> support .js、.ts、.html
+
+Config:
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: [...,'@youngjuning/eslint-config/html']
 }
 ```
 

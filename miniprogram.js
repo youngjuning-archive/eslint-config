@@ -1,6 +1,11 @@
-const html = require('./overrides/html');
-
 module.exports = {
   extends: ['./base'],
-  overrides: [html],
+  globals: {
+    wx: 'wx',
+    App: 'App',
+    Page: 'Page',
+    Component: 'Component',
+    getApp: 'getApp',
+    getCurrentPages: 'getCurrentPages',
+  },
 };

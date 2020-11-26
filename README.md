@@ -85,7 +85,7 @@ module.exports = {
 
 ## Vue
 
-> support .js、.ts、.vue、.html
+> support .js、.ts、.vue
 
 Dependencies:
 

@@ -119,6 +119,12 @@ module.exports = {
 
 > support .js、.ts、.html
 
+Dependencies:
+
+```sh
+$ yarn add -D eslint-plugin-html
+```
+
 Config:
 
 ```js

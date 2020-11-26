@@ -1,6 +1,6 @@
 # @youngjuning/eslint-config
 
-a powerful esLint config based on airbnb, support react、react-native、vue、miniprogram
+a powerful esLint config based on airbnb
 
 > Please Remove your eslint、prettier plugin first. All in @youngjuning/eslint-config
 
@@ -21,6 +21,8 @@ module.exports = require('@youngjuning/prettier-config');
 
 ## Base
 
+> support .js、.ts
+
 Dependencies:
 
 ```sh
@@ -37,6 +39,8 @@ module.exports = {
 ```
 
 ## React
+
+> support .js、.ts、.jsx、.tsx、.html
 
 Dependencies:
 
@@ -57,6 +61,8 @@ module.exports = {
 ```
 
 ## React Native
+
+> support .js、.ts、.jsx、.tsx
 
 Dependencies:
 
@@ -79,6 +85,8 @@ module.exports = {
 
 ## Vue
 
+> support .js、.ts、.vue、.html
+
 Dependencies:
 
 ```sh
@@ -95,6 +103,8 @@ module.exports = {
 ```
 
 ## miniprogram
+
+> support .js、.ts、.wxml
 
 Dependencies:
 

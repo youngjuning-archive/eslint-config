@@ -2,6 +2,8 @@
 
 a powerful esLint config based on airbnb, support react、react-native、vue、miniprogram
 
+> Please Remove your eslint、prettier plugin first. All in @youngjuning/eslint-config
+
 ## Prettier
 
 Dependencies:
@@ -22,7 +24,7 @@ module.exports = require('@youngjuning/prettier-config');
 Dependencies:
 
 ```sh
-$ yarn add -D eslint @youngjuning/eslint-config
+$ yarn add -D @youngjuning/eslint-config
 ```
 
 Config:
@@ -42,8 +44,7 @@ Dependencies:
 $ yarn add -D eslint-plugin-react \
   eslint-plugin-react-hooks \
   eslint-plugin-jsx-a11y \
-  eslint-plugin-import \
-  eslint-plugin-html
+  eslint-plugin-import
 ```
 
 Config:
@@ -81,7 +82,7 @@ module.exports = {
 Dependencies:
 
 ```sh
-$ yarn add -D @vue/cli-service eslint-plugin-vue @vue/eslint-config-airbnb eslint-plugin-html
+$ yarn add -D @vue/cli-service eslint-plugin-vue @vue/eslint-config-airbnb
 ```
 
 Config:
@@ -108,12 +109,6 @@ Config:
 module.exports = {
   extends: ['@youngjuning/eslint-config/miniprogram']
 }
-```
-
-## Jest
-
-```sh
-$ yarn add jest -D
 ```
 
 ## More Config

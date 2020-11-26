@@ -2,7 +2,7 @@
 
 a powerful esLint config based on airbnb
 
-> Please Remove your eslint、prettier plugin first. All in @youngjuning/eslint-config
+> Please remove your eslint、prettier plugin first. All in @youngjuning/eslint-config
 
 ## Prettier
 

@@ -1,7 +1,5 @@
-const javascriptRule = require('./rules/javascript');
 module.exports = {
   files: ['*.js'],
-  extends: ['airbnb-base/legacy', 'prettier'],
+  extends: ['airbnb-base/legacy', './rules/javascript', 'prettier'],
   parser: 'babel-eslint',
-  rules: { ...javascriptRule },
 };

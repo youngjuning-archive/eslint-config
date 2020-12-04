@@ -1,13 +1,12 @@
-const javascriptRule = require('./rules/javascript');
-const reactRule = require('./rules/react');
-const typescriptRule = require('./rules/typescript');
-
 module.exports = {
   files: ['*.tsx'],
   extends: [
     'airbnb',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
+    './rules/javascript',
+    './rules/typescript',
+    './rules/react',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -17,12 +16,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-  },
-  rules: {
-    ...javascriptRule,
-    ...reactRule,
-    ...typescriptRule,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
   settings: {
     react: {

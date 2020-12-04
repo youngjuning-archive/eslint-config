@@ -1,19 +1,14 @@
-const javascriptRule = require('./rules/javascript');
-const typescriptRule = require('./rules/typescript');
-
 module.exports = {
   files: ['*.ts'],
   extends: [
     'airbnb-base/legacy',
     'plugin:@typescript-eslint/recommended',
+    './rules/javascript',
+    './rules/typescript',
     'prettier',
     'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
-  rules: {
-    ...javascriptRule,
-    ...typescriptRule,
-  },
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
